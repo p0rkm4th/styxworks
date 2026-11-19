@@ -1,0 +1,20 @@
+# Signing material — NEVER commit. The keystore is the app's identity:
+# lose it and updates can't install over existing installs; leak it and
+# anyone can sign as you.
+*.keystore
+*.jks
+keystore.properties
+
+# Build output — APKs belong in GitHub Releases, not the tree
+*.apk
+*.idsig
+out/
+android/project/build/
+
+# build.sh copies styxworks.html into the app assets at build time;
+# the canonical copy lives at the repo root, so the copy is never tracked
+android/project/assets/index.html
+
+# Local toolchain (install separately — see README)
+sdk/
+tools/
